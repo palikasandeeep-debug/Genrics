@@ -184,100 +184,365 @@ namespace Genrics
 
 
 
-         //=================================================================================================================
-         //ArayyLIst Example
-        static void Main()
-        {
-            ArrayList patients = new ArrayList();
-            Console.WriteLine("enter number of patients");
-            int p=int.Parse(Console.ReadLine());
-            for (int i = 0; i <= p; i++)
-            {
-                Console.WriteLine("enter patient nameas");
-                patients.Add(Console.ReadLine());
+        //=================================================================================================================
+        //ArayyLIst Example
+        //static void Main()
+        //{
+        //    ArrayList patients = new ArrayList();
+        //    Console.WriteLine("enter number of patients");
+        //    int p=int.Parse(Console.ReadLine());
+        //    for (int i = 0; i <= p; i++)
+        //    {
+        //        Console.WriteLine("enter patient nameas");
+        //        patients.Add(Console.ReadLine());
 
-            }
-            //// Add patients
-            //patients.Insert(0, "abc");
-            //patients.Add("Ravi");
-            //patients.Add("Kiran");
-            //patients.Add("Suresh");
+        //    }
+        //    //// Add patients
+        //    //patients.Insert(0, "abc");
+        //    //patients.Add("Ravi");
+        //    //patients.Add("Kiran");
+        //    //patients.Add("Suresh");
 
-            Console.WriteLine("After Add:");
-            foreach (var pt in patients)
-            {
-                Console.WriteLine(pt);
-            }
-    
-            // Insert patient indx
-            Console.WriteLine("enter position to insert");
-            int pos=int.Parse(Console.ReadLine());
-            Console.WriteLine("enter patient name");
-            string pname=Console.ReadLine();
-            patients.Insert(pos, pname  );
+        //    Console.WriteLine("After Add:");
+        //    foreach (var pt in patients)
+        //    {
+        //        Console.WriteLine(pt);
+        //    }
 
-            Console.WriteLine("\nAfter Insert:");
-            foreach (var pt in patients)
-            {
-                Console.WriteLine(pt);
-            }
+        //    // Insert patient indx
+        //    Console.WriteLine("enter position to insert");
+        //    int pos=int.Parse(Console.ReadLine());
+        //    Console.WriteLine("enter patient name");
+        //    string pname=Console.ReadLine();
+        //    patients.Insert(pos, pname  );
+
+        //    Console.WriteLine("\nAfter Insert:");
+        //    foreach (var pt in patients)
+        //    {
+        //        Console.WriteLine(pt);
+        //    }
+
+        //    // Check patient exists
+        //    Console.WriteLine("enter patient name to check exists or not");
+        //    string patientexit=Console.ReadLine();
+        //    Console.WriteLine("\nContains Ravi? " + patients.Contains(patientexit));
+
+        //    // Remove patient by value
+        //    Console.WriteLine("enter patient name to remove");
+        //    string removename=Console.ReadLine();
+        //    patients.Remove(removename);
+
+        //    Console.WriteLine("\nAfter Remove:");
+        //    foreach (var pt in patients)
+        //    {
+        //        Console.WriteLine(pt);
+        //    }
+
+        //    // Remove patient by index
+        //    Console.WriteLine("enter position to removeat");
+        //    int rpos=int.Parse(Console.ReadLine());
+        //    patients.RemoveAt(rpos);
+
+        //    Console.WriteLine("\nAfter RemoveAt:");
+        //    foreach (var pt in patients)
+        //    {
+        //        Console.WriteLine(pt);
+        //    }
+
+        //    // Count patients
+        //    Console.WriteLine("\nTotal Patients: " + patients.Count);
+
+        //    // Access by index
+        //    Console.WriteLine("enter index number  ");
+        //    int index=int.Parse(Console.ReadLine());
+        //    Console.WriteLine("  Patient: " + patients[index]);
+
+
+        //    // Clear all patients
+        //    //patients.Clear();
+
+        //    //Console.WriteLine("\nAfter Clear:");
+        //    //Console.WriteLine("Total Patients: " + patients.Count);
+
+        //    // Clear
+        //    Console.Write("\nDo You Want to Clear All Records? (yes/no): ");
+        //    string choice = Console.ReadLine();
+
+        //    if (choice.ToLower() == "yes")
+        //    {
+        //        patients.Clear();
+        //        Console.WriteLine("All Records Cleared");
+        //        Console.WriteLine("Total Patients: " + patients.Count);
+        //    }
+        //}
+
+
+
+
+
+
+
+
+
+        ///=======================================================================================
+        //Hashtable
+
+        //static void Main(string[] args)
+        //{
+
+        //    Hashtable ht = new Hashtable();
+        //    ht.Add("1", "one");
+        //    ht.Add("2", "two");
+        //    ht.Add("3", "three");
+        //    Console.WriteLine("hash table elements");
+        //   foreach (DictionaryEntry entry in ht)
+        //    {
+        //        Console.WriteLine("ky {0} value{1}", entry.Key, entry.Value);
+        //    }
+        //    Console.WriteLine("accesed by Key");
+        //    Console.WriteLine("key:1 value{0}", ht["1"]);
+        //    Console.WriteLine("Remove by Key");
+        //    ht.Remove("2");
+        //    foreach (DictionaryEntry entry in ht)
+        //    {
+
+        //        Console.WriteLine("key {0} value{1}", entry.Key, entry.Value);
+        //    }
+        //    Console.WriteLine("contains key :1{0}",ht.ContainsKey("1"));
+
+        //}
+
+
+
+
+
+
+
+        // ==================================================================================
+
+
+
+
+        //static void Main(string[] args)
+        //{
+        //    Console.WriteLine("=====arraylist=======");
+        //    ArrayList al=new ArrayList();
+        //    al.Add("sandy");
+        //    al.Add("palka");
+        //    al.Add("rama");
+        //    al.Add("kothi");
+
+        //    Console.WriteLine("array list students");
+        //    foreach(var item  in al)
+        //    {
+        //        Console.WriteLine(item);
+        //    }
+
+
+        //    //=====================================
+        //    Console.WriteLine("==============hashtable============");
+        //    Hashtable ht= new Hashtable();
+        //    ht.Add("1", "rama");
+        //    ht.Add("2", "raj");
+        //    ht.Add("3", "potti");
+        //    Console.WriteLine("printing hashtable key value pairs ");
+
+        //    foreach (DictionaryEntry item2 in ht)
+        //    {
+        //        Console.WriteLine("key {0}    value{1}   ",item2.Key,item2.Value);
+        //    }
+
+        //    //queue
+        //    Console.WriteLine("=========Queue================");
+        //    Queue queue= new Queue();
+        //    queue.Enqueue("rama");
+        //    queue.Enqueue("raj");
+        //    queue.Enqueue("ramesh");
+        //    queue.Enqueue("gold meadlist");
+
+        //    Console.WriteLine("queue members");
+        //    foreach(var q in queue)
+        //    {
+        //        Console.WriteLine(q);
+        //    }
+        //    Console.WriteLine("--------------------------");
+        //    Console.WriteLine("dequeue "+queue.Dequeue());
+        //    Console.WriteLine("after dequeue" );
+        //    foreach (var q in queue)
+        //    {
+        //        Console.WriteLine(q);
+        //    }
+
+        //    Console.WriteLine("============stack===================");
+        //    Console.WriteLine("SAtCK");
+        //    //stack
+        //    Stack s= new Stack();
+
+
+        //    s.Push("asp.net mvc core");
+        //    s.Push("asp.net mvc");
+        //    s.Push("asp.net");
+
+        //    Console.WriteLine("stack list");
+        //   foreach (var st in s)
+        //    {
+        //        Console.WriteLine(st);
+        //    }
+
+        //    Console.WriteLine("--------------------------");
+        //    Console.WriteLine(" after pop "+s.Pop());
+        //    foreach(var st in s)
+        //    {
+        //        Console.WriteLine(st);
+
+        //    }
+        //}
+        //======================================================================================================
+
+        //LIST:
+        //static void Main(string[] args)
+        //{
+        //    List<int> numbers = new List<int>();
+        //    numbers.Add(1);
+        //    numbers.Add(3);
+        //    numbers.Add(2);
+        //    numbers.Add(4);
+        //    numbers.Add(6);
+        //    numbers.Add(5);
+        //    Console.WriteLine("inside list numvers");
+        //    foreach (int i in numbers)
+        //    {
+        //        Console.WriteLine(i);
+
+        //    }
+        //    numbers.Sort();
+        //    Console.WriteLine("aftre soting numbers");
+        //    foreach (int i in numbers)
+        //    {
+        //        Console.WriteLine(i);
+        //    }
+        //    numbers.Remove(3);
+        //    Console.WriteLine("after removing an element");
+        //    foreach (int i in numbers)
+        //    {
+        //        Console.WriteLine(i);
+
+        //    }
+        //    Console.WriteLine("total number elements in lis" + numbers.Count);
+        //    Console.WriteLine("contains 2" + numbers.Contains(2));
+        //    numbers.RemoveAt(0);
+        //    Console.WriteLine("ofter romoving index 0");
+        //    foreach (int i in numbers)
+        //    {
+        //        Console.WriteLine(i);
+        //    }
+        //    numbers.Clear();
+        //    Console.WriteLine("total number of elemts ofter clear" + numbers.Count);
+
+        //}
+
+        //
+
+        //static void Display(List<string> students)
+        //{
+        //    foreach (string student in students)
+        //    {
+        //        Console.WriteLine(student);
+        //    }
+        //}
+
+        //static void Main()
+        //{
+
+
+        //    List<string> students = new List<string>();
+
+
+        //    students.Add("Ravi");
+        //    students.Add("kothi");
+        //    students.Add("sandy");
+
+        //    Console.WriteLine("After add:");
+        //    Display(students);
+
+
+        //    students.Insert(1, "Suresh");
+        //    Console.WriteLine("after insert:");
+        //    Display(students);
+
+
+        //    students.Remove("kothi");
+        //    Console.WriteLine("After Remove:");
+        //    Display(students);
+
+
+        //    students.RemoveAt(0);
+        //    Console.WriteLine("After RemoveAt:");
+        //    Display(students);
+
+
+        //    Console.WriteLine("Contains sandy? " +
+        //                      students.Contains("sandy"));
+
+
+        //    Console.WriteLine("index of sandy: " +
+        //                      students.IndexOf("sandy"));
+
+
+        //    Console.WriteLine("Total Students: " +
+        //                      students.Count);
+
+
+        //    students.Sort();
+        //    Console.WriteLine("after sort:");
+        //    Display(students);
+
+
+        //    students.Reverse();
+        //    Console.WriteLine("after reverse:");
+        //    Display(students);
+
+
+        //    students[0] = "palika";
+        //    Console.WriteLine("After Update:");
+        //    Display(students);
+
+
+        //    Console.WriteLine("using foreach:");
+        //    foreach (string student in students)
+        //    {
+        //        Console.WriteLine(student);
+        //    }
+
+
+        //    students.Clear();
+        //    Console.WriteLine("After Clear:");
+        //    Console.WriteLine("Count " + students.Count);
+        //}
+
+
+        //static void Main(string[] args)
+        //{
+        //   Stack <string> st=new Stack<string>();
+        //    st.Push("rama");
+        //    st.Push("raju");
+        //    st.Push("ramesh");
+        //    st.Push("rani");
+        //   Console.WriteLine("elements in stack");
+        //   foreach(var s in st)
+        //    {
+        //        Console.WriteLine(s);
+        //    }
+        //    Console.WriteLine("pop on element" + st.Pop());
+        //    Console.WriteLine("peek on element"+st.Peek());
+        //    Console.WriteLine(" all number " + st.Count());
+        //    st.Clear();
+        //    Console.WriteLine("after clearing all number "+st.Count());
+        //}
+
         
-            // Check patient exists
-            Console.WriteLine("enter patient name to check exists or not");
-            string patientexit=Console.ReadLine();
-            Console.WriteLine("\nContains Ravi? " + patients.Contains(patientexit));
-
-            // Remove patient by value
-            Console.WriteLine("enter patient name to remove");
-            string removename=Console.ReadLine();
-            patients.Remove(removename);
-
-            Console.WriteLine("\nAfter Remove:");
-            foreach (var pt in patients)
-            {
-                Console.WriteLine(pt);
-            }
-
-            // Remove patient by index
-            Console.WriteLine("enter position to removeat");
-            int rpos=int.Parse(Console.ReadLine());
-            patients.RemoveAt(rpos);
-
-            Console.WriteLine("\nAfter RemoveAt:");
-            foreach (var pt in patients)
-            {
-                Console.WriteLine(pt);
-            }
-
-            // Count patients
-            Console.WriteLine("\nTotal Patients: " + patients.Count);
-
-            // Access by index
-            Console.WriteLine("enter index number  ");
-            int index=int.Parse(Console.ReadLine());
-            Console.WriteLine("  Patient: " + patients[index]);
-
-
-            // Clear all patients
-            //patients.Clear();
-
-            //Console.WriteLine("\nAfter Clear:");
-            //Console.WriteLine("Total Patients: " + patients.Count);
-
-            // Clear
-            Console.Write("\nDo You Want to Clear All Records? (yes/no): ");
-            string choice = Console.ReadLine();
-
-            if (choice.ToLower() == "yes")
-            {
-                patients.Clear();
-                Console.WriteLine("All Records Cleared");
-                Console.WriteLine("Total Patients: " + patients.Count);
-            }
-        }
     }
 
-    
-
 }
+
 
