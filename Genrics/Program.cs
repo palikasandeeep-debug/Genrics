@@ -441,7 +441,9 @@ namespace Genrics
 
         //}
 
-        //
+        //==========================================================================
+
+        //list<t> example
 
         //static void Display(List<string> students)
         //{
@@ -519,7 +521,11 @@ namespace Genrics
         //    Console.WriteLine("After Clear:");
         //    Console.WriteLine("Count " + students.Count);
         //}
+        //======================================================================================
 
+
+
+        //STACK<T>
 
         //static void Main(string[] args)
         //{
@@ -540,7 +546,32 @@ namespace Genrics
         //    Console.WriteLine("after clearing all number "+st.Count());
         //}
 
-        
+        //================================================================================
+        //QUEUE<T>
+        static void Main(string[] args)
+        {
+            Queue<string> st = new Queue<string>();
+            st.Enqueue("rama");
+            st.Enqueue("raju");
+            st.Enqueue("ramesh");
+            st.Enqueue("rani");
+            Console.WriteLine("elements in queue");
+            foreach (var s in st)
+            {
+                Console.WriteLine(s);
+            }
+            Console.WriteLine("dequeue on element" + st.Dequeue());
+            Console.WriteLine("peek on element" + st.Peek());
+            Console.WriteLine(" queue in number " + st.Count());
+            st.Clear();
+            Console.WriteLine("after clearing all student in queue " + st.Count());
+        }
+
+      
+
+
+
+
     }
 
 }
